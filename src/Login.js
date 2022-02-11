@@ -28,7 +28,7 @@ function Login(props) {
     
     setError(null);
     setLoading(true);
-    axios.post('http://ownid-custom-integration-java-gigya.eu-west-1.elasticbeanstalk.com/api/auth/login', { email: username.value, password: password.value }).then(response => {
+    axios.post('https://custom-java-integration.estrategic.es/api/auth/login', { email: username.value, password: password.value }).then(response => {
       setLoading(false);
       setUserSession(response.data.token);
       props.history.push('/dashboard');

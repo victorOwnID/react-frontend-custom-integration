@@ -42,7 +42,7 @@ function Registration(props) {
 
   const register = (username,password,ownIdData) => {
 
-    axios.post('http://ownid-custom-integration-java-gigya.eu-west-1.elasticbeanstalk.com/api/auth/register', { email: username, password: password, ownIdData: ownIdData }).then(response => {
+    axios.post('https://custom-java-integration.estrategic.es/api/auth/register', { email: username, password: password, ownIdData: ownIdData }).then(response => {
       setLoading(false);
       setUserSession(response.data.token);
       props.history.push('/dashboard');
