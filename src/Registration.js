@@ -12,7 +12,7 @@ function Registration(props) {
       language: 'en',
       loginIdField: username.current,
       passwordField: password.current,
-      serverUrl: 'http://localhost:5002/ownid',
+      serverUrl: 'https://vtvi9y8pqbh6zt.server.dev.ownid.com/ownid',
       onError:(error) => setError(error),
     });
   }, []);

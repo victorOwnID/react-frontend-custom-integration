@@ -12,7 +12,7 @@ function Login(props) {
       language: 'en',
       loginIdField: document.getElementById("email"),
       passwordField: document.getElementById("password"),
-      serverUrl: 'https://759e14614jlorn.server.dev.ownid.com/ownid',
+      serverUrl: 'https://vtvi9y8pqbh6zt.server.dev.ownid.com/ownid',
       submitButton: document.getElementById("submit-reg"),
       onLogin: function(data){
         console.log(data);
