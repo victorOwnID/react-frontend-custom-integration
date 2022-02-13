@@ -9,11 +9,11 @@ function Dashboard(props) {
     props.history.push('/login');
   }
 
-  var userUID = parseJWT(localStorage.getItem("token"));
+  var userUID = parseJWT(sessionStorage.getItem("token"));
 
   return (
     <div>
-      Welcome {userUID}!<br /><br />
+      Welcome {userUID.sub}!<br /><br />
       <input type="button" onClick={handleLogout} value="Logout" />
     </div>
   );
