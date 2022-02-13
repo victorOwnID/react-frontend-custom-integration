@@ -1,5 +1,5 @@
 import React from 'react';
-import { removeUserSession } from './Utils/Common';
+import { parseJWT, removeUserSession } from './Utils/Common';
 
 function Dashboard(props) {
 
@@ -9,9 +9,11 @@ function Dashboard(props) {
     props.history.push('/login');
   }
 
+  var userUID = parseJWT(localStorage.getItem("token"));
+
   return (
     <div>
-      Welcome!<br /><br />
+      Welcome {userUID}!<br /><br />
       <input type="button" onClick={handleLogout} value="Logout" />
     </div>
   );
